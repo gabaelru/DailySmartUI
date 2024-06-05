@@ -6,6 +6,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./components/home";
 import reducers from "./reducers";
 
+import Results from './components/results';
+
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 import "./style/main.scss";
@@ -16,7 +18,7 @@ function main() {
       <BrowserRouter>
         <Switch>
               <Route path='/' component={Home}/>
-              <Route path='/results' component={Home}/>
+              <Route path='/results' component={Results}/>
           </Switch>
       </BrowserRouter>
     </Provider>,
